@@ -26,9 +26,9 @@ public class SpringFeignClientApplication {
 		return client.getAllUsers();
 	}
 
-	@GetMapping("/welcome")
+	@GetMapping("/test")
 	public String welcome() {
-		return "hellow";
+		return "welcome to feign client";
 	}
 	public static void main(String[] args) {
 		SpringApplication.run(SpringFeignClientApplication.class, args);
