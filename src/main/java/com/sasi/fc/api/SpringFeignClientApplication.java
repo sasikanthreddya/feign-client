@@ -26,6 +26,10 @@ public class SpringFeignClientApplication {
 		return client.getAllUsers();
 	}
 
+	@GetMapping("/welcome")
+	public String welcome() {
+		return "hellow";
+	}
 	public static void main(String[] args) {
 		SpringApplication.run(SpringFeignClientApplication.class, args);
 	}
