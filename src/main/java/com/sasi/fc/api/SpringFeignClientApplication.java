@@ -14,18 +14,11 @@ import com.sasi.fc.api.dto.UserResponce;
 
 
 @SpringBootApplication
-@RestController
+
 @EnableFeignClients
 public class SpringFeignClientApplication {
 	
-	@Autowired
-	private UserClient client;
-
-	@GetMapping("/findAllUser")
-	public List<UserResponce> getAllUser() {
-		return client.getAllUsers();
-	}
-
+	
 	@GetMapping("/test")
 	public String welcome() {
 		return "welcome to feign client";
